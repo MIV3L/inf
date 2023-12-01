@@ -2,19 +2,20 @@
 using namespace std;
 
 int main() {
-    int szerokosc, wysokosc;
+    int dywan;
 
-    // Wprowadzanie danych od użytkownika
+    // pobranie wymiarow dywanu od uzytkownika
     cout << "Podaj szerokosc: ";
     cin >> szerokosc;
 
     cout << "Podaj wysokosc: ";
     cin >> wysokosc;
 
-    // Tworzenie wzoru
+    // pobieranie z gory wysokosci i szerokosci 
     for (int i = 0; i < wysokosc; ++i) {
         for (int j = 0; j < szerokosc; ++j) {
             if ((i + j) % 2 == 0) {
+                // tutaj wypisujemy # oraz * na dane dlugosci
                 cout << "#";
             } else {
                 cout << "*";
