@@ -1,14 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main() {
+    int dywan;
 
-{
-	for (int i = 15; i <= 50; ++i) { // petla for bedzie dzialac dopoki zmienna i bedzie mniejsza lub rowna 50 
-		if (i % 5 == 0) { // sprawdza czy reszta z dzielenia przez 5 wynosi 0 
-			cout << i<< " "; // jesli spelnia warunek to dzielona liczba jest wyswietlana na ekanie
-			
-		}
-	}
-	return 0;
+    // pobranie wymiarow dywanu od uzytkownika
+    cout << "Podaj szerokosc: ";
+    cin >> szerokosc;
+
+    cout << "Podaj wysokosc: ";
+    cin >> wysokosc;
+
+    // pobieranie z gory wysokosci i szerokosci 
+    for (int i = 0; i < wysokosc; ++i) {
+        for (int j = 0; j < szerokosc; ++j) {
+            if ((i + j) % 2 == 0) {
+                // tutaj wypisujemy # oraz * na dane dlugosci
+                cout << "#";
+            } else {
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
